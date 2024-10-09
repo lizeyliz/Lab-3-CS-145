@@ -44,9 +44,11 @@ public class LetterInventory {
                 case 122 -> letterCount[25]++; //z
             } //end switch/case
         } //end for loop (run through string)
-        //print arrray (for testing)
-        for (int j=0; j < letterCount.length; j++){
-            System.out.print(letterCount[j] + ", ");
-        }//end test array
+        //letter count display
+        System.out.println("Letter Count:");
+        System.out.println("a: " + letterCount[0]);
+        System.out.println("b: " + letterCount[1]);
+        //etc
+    
     }//end method main
 }//end Class LetterInventory
