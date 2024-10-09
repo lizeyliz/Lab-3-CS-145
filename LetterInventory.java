@@ -6,6 +6,11 @@ public class LetterInventory {
         for (int i=0; i < test.length(); i++) {
             int number = (int) test.toLowerCase().charAt(i);
             System.out.println(number);
+            if(number < 124 && number > 96){
+                //add to lettercount
+            } else {
+                //disregard
+            }
         }
     }
 }
