@@ -1,14 +1,17 @@
+import java.util.Scanner;
 public class LetterInventory {
     public static void main(String args[]){
-        //first method: letterInventory
+        Scanner scan = new Scanner(System.in);
+        //first METHOD: letterInventory
         // Array for counting each letter: position 0 is a, 25 is z, etc.
         int[] letterCount = new int[25];
-        //test string, will add user input later
-        String test = "aabbcd";
+        //user input
+        System.out.println("Enter a string:");
+        String userString = scan.nextLine();
         //runs through each char in string
-        for (int i=0; i < test.length(); i++) {
+        for (int i=0; i < userString.length(); i++) {
             //getting the ASCII value of the character (lowercase)
-            int charValue = (int) test.toLowerCase().charAt(i);
+            int charValue = (int) userString.toLowerCase().charAt(i);
             //System.out.println(charValue); //test code
             //lowercase ASCII alphabet
             //add to lettercount
