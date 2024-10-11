@@ -49,13 +49,11 @@ public class LetterInventory {
         } //end for loop (run through string)
         
         //letter count display for a-z
-        //System.out.println("Letter Count:");
-        //System.out.println("a: " + letterCount[0]);
-       System.out.println("b: " + letterCount[1]);
-       for (int row = 0; row < 26; row++) {  //iterate over the array, prints final count of each letter from a-z
+        //iterate over the array, prints final count of each letter from a-z
+       for (int row = 0; row < 26; row++) {
+        //casting into character value?
         System.out.println((char)(row + 'a') + ": " + letterCount[row]);
        }
-        
     
     }//end method main
 }//end Class LetterInventory
