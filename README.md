@@ -10,5 +10,5 @@ To do:
 - fix next looping to nextLine (multiple words)
 - pre-lab
 - post-Lab
-- add extra credit line
+- add extra credit lines (when completely finished with code)
 - make .pkg file
