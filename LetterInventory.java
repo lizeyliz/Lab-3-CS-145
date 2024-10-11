@@ -4,21 +4,25 @@ public class LetterInventory {
     public static void main(String args[]){
         //adds user input capability
         Scanner scan = new Scanner(System.in);
-        // initialize Array for counting each letter: position 0 is a, 25 is z, etc.
-        int[] letterCount = new int[26];
-        //user input
-        System.out.println("Enter a word or a short phrase and we'll give you a count" 
-        + "of A-Z characters:");
-        String userString = scan.nextLine();
-        //call setLetterCount
-        setLetterCount(userString, letterCount);
-        //call printLetterCount
-        printLetterCount(letterCount);
+        int yesOrNo = 1;
+        String userString = "test";
+        do { 
+            // initialize Array for counting each letter: position 0 is a, 25 is z, etc.
+            int[] letterCount = new int[26];
+            //user input
+            System.out.println("Enter a word or a short phrase and we'll give you a count" 
+            + " of A-Z characters:");
+            //problem with nextLine, need to fix
+            userString = scan.next();
+            //call setLetterCount
+            setLetterCount(userString, letterCount);
+            //call printLetterCount
+            printLetterCount(letterCount); 
+            //prompt to play again 
+            System.out.println("Would you like to test another String? (0 yes 1 no)");
+            yesOrNo = scan.nextInt();
+            } while (yesOrNo == 0);
     }//end method main
-
-    /*public String getInput(){
-
-    }//end getInput*/
 
     public static int[]setLetterCount(String userString, int[] letterCount) {
          //runs through each char in string
