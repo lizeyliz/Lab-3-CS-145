@@ -66,7 +66,10 @@ public class LetterInventory {
         System.out.println("Letter Count:");
         for (int row = 0; row < 26; row++) {
             //casting into character value
-            System.out.println((char)(row + 'a') + ": " + letterCount[row]);
+            //don't print if letter has zero occurences
+            if (letterCount[row] != 0){
+                System.out.println((char)(row + 'a') + ": " + letterCount[row]);
+            }// end if statement
        }
     }//end printLetterCount
 }//end Class LetterInventory
