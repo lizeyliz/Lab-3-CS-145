@@ -1,4 +1,3 @@
-import java.net.SocketImpl;
 import java.util.Scanner;
 
 public class LetterInventory {
