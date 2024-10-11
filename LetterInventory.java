@@ -7,7 +7,8 @@ public class LetterInventory {
         // initialize Array for counting each letter: position 0 is a, 25 is z, etc.
         int[] letterCount = new int[26];
         //user input
-        System.out.println("Enter a word or a short phrase and we'll give you a count of A-Z characters:");
+        System.out.println("Enter a word or a short phrase and we'll give you a count" 
+        + "of A-Z characters:");
         String userString = scan.nextLine();
         //call setLetterCount
         setLetterCount(userString, letterCount);
