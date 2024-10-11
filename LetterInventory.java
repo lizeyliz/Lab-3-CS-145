@@ -1,3 +1,23 @@
+// Aliza, Abby, and Ro
+
+// CS 145 8am
+
+// Assignment: Lab 3 Letter Inventory
+
+/* Purpose: Create an inventory of the number of occurrences of letters in a string 
+the user inputs. */
+
+// 10/12/24
+
+// Extra Credit (add line #s): 
+// ASCII values 
+// Array 
+// casting
+
+// Citation: 
+// ASCII values: https://www.cs.cmu.edu/~pattis/15-1XX/common/handouts/ascii.html
+// nextLine looping: https://www.reddit.com/r/learnjava/comments/q1gnzg/while_loop_question_again/
+
 import java.util.Scanner;
 
 public class LetterInventory {
