@@ -4,8 +4,8 @@ public class LetterInventory {
     public static void main(String args[]){
         //adds user input capability
         Scanner scan = new Scanner(System.in);
-        int yesOrNo = 1;
-        String userString = "test";
+        //initialize
+        int yesOrNo;
         do { 
             // initialize Array for counting each letter: position 0 is a, 25 is z, etc.
             int[] letterCount = new int[26];
@@ -13,7 +13,8 @@ public class LetterInventory {
             System.out.println("Enter a word or a short phrase and we'll give you a count" 
             + " of A-Z characters:");
             //problem with nextLine, need to fix
-            userString = scan.next();
+            //gets user string and sets to lower case   
+            String userString = scan.next().toLowerCase();
             //call setLetterCount
             setLetterCount(userString, letterCount);
             //call printLetterCount
@@ -27,12 +28,10 @@ public class LetterInventory {
     public static int[]setLetterCount(String userString, int[] letterCount) {
          //runs through each char in string
          for (int i=0; i < userString.length(); i++) {
-            //getting the ASCII value of the character (lowercase)
-            int charValue = (int) userString.toLowerCase().charAt(i);
-            //System.out.println(charValue); //test code
-            //lowercase ASCII alphabet
-            //add to lettercount
-            //used abs value to assign array values to get rid of long switch/case
+            //getting the ASCII value of the character
+            int charValue = (int) userString.charAt(i);
+            //adds to array if values equal lowercase ASCII alphabet
+            //position in array based on ASCII value (e.g a(97) is position 0)
             if(charValue > 96 && charValue < 123) {
                 letterCount[Math.abs(97 - charValue)]++;
             }//end if statement
