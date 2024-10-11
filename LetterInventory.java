@@ -2,17 +2,33 @@ import java.util.Scanner;
 
 public class LetterInventory {
     public static void main(String args[]){
+        //adds user input capability
         Scanner scan = new Scanner(System.in);
-        //first METHOD: letterInventory
-        // Array for counting each letter: position 0 is a, 25 is z, etc.
-        // Wasn't working for 'Zebra'. Changed to 26, it works but not sure why
-        // Will follow up with Darrell to explain valid vs. out-of-bounds indices
+        // initialize Array for counting each letter: position 0 is a, 25 is z, etc.
         int[] letterCount = new int[26];
         //user input
         System.out.println("Enter a word or a short phrase and we'll give you a count of A-Z characters:");
         String userString = scan.nextLine();
-        //runs through each char in string
-        for (int i=0; i < userString.length(); i++) {
+
+        //call setLetterCount
+        setLetterCount(userString, letterCount);
+        
+        //letter count display for a-z
+        //iterate over the array, prints final count of each letter from a-z
+        System.out.println("Letter Count:");
+       for (int row = 0; row < 26; row++) {
+        //casting into character value?
+        System.out.println((char)(row + 'a') + ": " + letterCount[row]);
+       }
+    }//end method main
+
+    /*public String getInput(){
+
+    }//end getInput*/
+
+    public static int[]setLetterCount(String userString, int[] letterCount) {
+         //runs through each char in string
+         for (int i=0; i < userString.length(); i++) {
             //getting the ASCII value of the character (lowercase)
             int charValue = (int) userString.toLowerCase().charAt(i);
             //System.out.println(charValue); //test code
@@ -47,13 +63,10 @@ public class LetterInventory {
                 case 122 -> letterCount[25]++; //z
             } //end switch/case
         } //end for loop (run through string)
-        
-        //letter count display for a-z
-        //iterate over the array, prints final count of each letter from a-z
-        System.out.println("Letter Count:");
-       for (int row = 0; row < 26; row++) {
-        //casting into character value?
-        System.out.println((char)(row + 'a') + ": " + letterCount[row]);
-       }
-    }//end method main
+        return letterCount;
+    }// end setLetterCount
+
+    /*public void printLetterCount(int[] letterCount){
+
+    }//end printLetterCount*/
 }//end Class LetterInventory
