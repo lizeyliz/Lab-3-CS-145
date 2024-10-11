@@ -9,17 +9,11 @@ public class LetterInventory {
         //user input
         System.out.println("Enter a word or a short phrase and we'll give you a count of A-Z characters:");
         String userString = scan.nextLine();
-
         //call setLetterCount
         setLetterCount(userString, letterCount);
-        
-        //letter count display for a-z
-        //iterate over the array, prints final count of each letter from a-z
-        System.out.println("Letter Count:");
-       for (int row = 0; row < 26; row++) {
-        //casting into character value?
-        System.out.println((char)(row + 'a') + ": " + letterCount[row]);
-       }
+        //call printLetterCount
+        printLetterCount(letterCount);
+
     }//end method main
 
     /*public String getInput(){
@@ -66,7 +60,13 @@ public class LetterInventory {
         return letterCount;
     }// end setLetterCount
 
-    /*public void printLetterCount(int[] letterCount){
-
-    }//end printLetterCount*/
+    public static void printLetterCount(int[] letterCount){
+        //letter count display for a-z
+        //iterate over the array, prints final count of each letter from a-z
+        System.out.println("Letter Count:");
+        for (int row = 0; row < 26; row++) {
+            //casting into character value
+            System.out.println((char)(row + 'a') + ": " + letterCount[row]);
+       }
+    }//end printLetterCount
 }//end Class LetterInventory
