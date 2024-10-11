@@ -54,6 +54,5 @@ public class LetterInventory {
         //casting into character value?
         System.out.println((char)(row + 'a') + ": " + letterCount[row]);
        }
-    
     }//end method main
 }//end Class LetterInventory
