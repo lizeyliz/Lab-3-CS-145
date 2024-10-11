@@ -13,7 +13,6 @@ public class LetterInventory {
         setLetterCount(userString, letterCount);
         //call printLetterCount
         printLetterCount(letterCount);
-
     }//end method main
 
     /*public String getInput(){
