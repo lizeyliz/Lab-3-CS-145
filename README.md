@@ -13,4 +13,3 @@ To do:
 - pre-lab
 - post-Lab
 - add extra credit lines (when completely finished with code)
-- make .pkg file
