@@ -12,9 +12,13 @@ public class LetterInventory {
             //user input
             System.out.println("Enter a word or a short phrase and we'll give you a count" 
             + " of A-Z characters:");
-            //problem with nextLine, need to fix
             //gets user string and sets to lower case   
-            String userString = scan.next().toLowerCase();
+            String userString = scan.nextLine().toLowerCase();
+            //added this so nextLine will loop correctly 
+            //(otherwise it will take newline token from last user input as userString)
+            if (userString.equals("")){
+                userString = scan.nextLine().toLowerCase();
+            }// end if statement
             //call setLetterCount
             setLetterCount(userString, letterCount);
             //call printLetterCount
