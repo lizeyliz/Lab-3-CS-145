@@ -6,7 +6,7 @@ public class LetterInventory {
         Scanner scan = new Scanner(System.in);
         //initialize
         int yesOrNo;
-        do { 
+        do { //start do/while loop, runs until user enters 1
             // initialize Array for counting each letter: position 0 is a, 25 is z, etc.
             int[] letterCount = new int[26];
             //user input
@@ -25,6 +25,7 @@ public class LetterInventory {
             } while (yesOrNo == 0);
     }//end method main
 
+    //puts number of instances of letters in user string into letter count array
     public static int[]setLetterCount(String userString, int[] letterCount) {
          //runs through each char in string
          for (int i=0; i < userString.length(); i++) {
@@ -39,14 +40,15 @@ public class LetterInventory {
         return letterCount;
     }// end setLetterCount
 
+    //prints out letter count display to user
     public static void printLetterCount(int[] letterCount){
         //letter count display for a-z
         //iterate over the array, prints final count of each letter from a-z
         System.out.println("Letter Count:");
         for (int row = 0; row < 26; row++) {
             //casting into character value
-            //don't print if letter has zero occurences
-            if (letterCount[row] != 0){
+            //doesn't print if letter has zero occurences
+            if (letterCount[row] != 0) {
                 System.out.println((char)(row + 'a') + ": " + letterCount[row]);
             }// end if statement
        }
