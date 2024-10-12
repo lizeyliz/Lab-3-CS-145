@@ -9,10 +9,9 @@ the user inputs. */
 
 // 10/12/24
 
-// Extra Credit (add line #s): 
-// ASCII values 
-// Array 
-// casting
+// Extra Credit: 
+// ASCII values and casting: line 55-60 and 75
+// Store letter count in an array: line 30(initialized),53, 60,75
 
 // Citation: 
 // ASCII values: https://www.cs.cmu.edu/~pattis/15-1XX/common/handouts/ascii.html
