@@ -11,7 +11,7 @@ the user inputs. */
 
 // Extra Credit: 
 // ASCII values and casting: line 55-60 and 75
-// Store letter count in an array: line 30(initialized),53, 60,75
+// Store letter count in an array: line 30(initialized), 53, 60, and 75
 
 // Citation: 
 // ASCII values: https://www.cs.cmu.edu/~pattis/15-1XX/common/handouts/ascii.html
